@@ -1,30 +1,31 @@
 ﻿using MongoDB.Driver;
 using RestApiTemplate.Database;
-using RestApiTemplate.Models.Mongo;
+using RestApiTemplate.Models;
+using RestApiTemplate.Repositories.Interface;
 
-namespace RestApiTemplate.Repositories.Mongo
+namespace RestApiTemplate.Repositories
 {
     public class RefreshTokenRepository : IRefreshTokenRepository
     {
-        private readonly IMongoCollection<MongoRefreshToken> _collection;
+        private readonly IMongoCollection<RefreshToken> _collection;
 
         public RefreshTokenRepository(MongoDbContext context )
         {
             _collection = context.RefreshTokens;
         }
-        public async Task AddAsync(MongoRefreshToken token)
+        public async Task AddAsync(RefreshToken token)
         {
             await _collection.InsertOneAsync( token );
         }
 
-        public async Task<MongoRefreshToken?> GetByTokenAsync(string token)
+        public async Task<RefreshToken?> GetByTokenAsync(string token)
         {
             return await _collection.Find(t => t.Token == token).FirstOrDefaultAsync();
         }
 
         public async Task RevokeAsync(string token)
         {
-            var update = Builders<MongoRefreshToken>.Update
+            var update = Builders<RefreshToken>.Update
             .Set(t => t.IsRevoked, true)
             .Set(t => t.RevokedAt, DateTime.UtcNow);
 

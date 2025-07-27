@@ -3,8 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.IdentityModel.Tokens;
 using RestApiTemplate.DTOs;
 using RestApiTemplate.Models;
-using RestApiTemplate.Models.Mongo;
-using RestApiTemplate.Repositories;
+using RestApiTemplate.Repositories.Interface;
 using RestApiTemplate.Services.Interfaces;
 using System.IdentityModel.Tokens.Jwt;
 using System.Runtime.InteropServices;
@@ -82,9 +81,9 @@ namespace RestApiTemplate.Services
             return new JwtSecurityTokenHandler().WriteToken(tokenDescriptor);
         }
 
-        public MongoRefreshToken GenerateRefreshToken(string userId, string ip)
+        public RefreshToken GenerateRefreshToken(string userId, string ip)
         {
-            return new MongoRefreshToken
+            return new RefreshToken
             {
                 Token = Convert.ToBase64String(RandomNumberGenerator.GetBytes(64)),
                 UserId = userId,
