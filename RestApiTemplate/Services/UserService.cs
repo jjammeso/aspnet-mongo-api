@@ -1,6 +1,6 @@
 ﻿using RestApiTemplate.DTOs;
 using RestApiTemplate.Models;
-using RestApiTemplate.Repositories;
+using RestApiTemplate.Repositories.Interface;
 using RestApiTemplate.Services.Interfaces;
 
 namespace RestApiTemplate.Services

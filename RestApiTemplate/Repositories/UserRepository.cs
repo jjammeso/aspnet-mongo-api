@@ -2,8 +2,9 @@
 using RestApiTemplate.Database;
 using RestApiTemplate.DTOs;
 using RestApiTemplate.Models;
+using RestApiTemplate.Repositories.Interface;
 
-namespace RestApiTemplate.Repositories.Mongo
+namespace RestApiTemplate.Repositories
 {
     public class UserRepository : IUserRepository
     {
