@@ -68,7 +68,7 @@ Update your appsettings.json:
 
 Set the following fields in appsettings.json under JwtSettings:
 
-```
+```json
 "JwtSettings": {
   "Issuer": "YourAppName",
   "Audience": "YourAppUser",
