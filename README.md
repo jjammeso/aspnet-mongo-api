@@ -67,6 +67,8 @@ dotnet run
 - API will run at: http://localhost:5173
 - Swagger UI available at: https://localhost:7095/swagger/index.html
 
+---
+
 ## 🔐 Authentication Flow
 
     Register → POST /auth/register    //Register a new user
@@ -85,10 +87,14 @@ Swagger UI is enabled at:
 
   Use it to test endpoints and view request/response models.
 
+---
+
 ## 💡 Why I build this template?
 
 I often found myself repeating the same setup for new projects: authentication, architecture, error handling, and more.
 This template helps spin up a new REST API in minutes with all essentials ready to go.
+
+---
 
 ## 🤝 Contribute or Use It
 
@@ -96,9 +102,13 @@ Feel free to use it in your own projects or contribute to improve it!
 
 Pull requests are welcome. 🌟
 
+---
+
 ### 📄 License
 
 MIT License
+
+---
 
 ### ✍️ Author
 
