@@ -6,7 +6,6 @@ Designed to save time by eliminating repetitive setup and allowing you to build 
 > **🚀 Same template with PostgreSQL as the database is available at:**  
 > 👉 [ASP.NET Core REST API Starter Template (PostgreSQL)](https://github.com/jjammeso/aspnet-postgres-api)
 
----
 
 ## ✨ Features
 
@@ -20,8 +19,6 @@ Designed to save time by eliminating repetitive setup and allowing you to build 
 - ⚙️ Dependency Injection for modularity and testability
 - 🌐 CORS enabled
 - 🔒 Secure headers + HTTPS enabled
-
----
 
 ## 📁 Folder Structure
 ```
@@ -97,7 +94,6 @@ Swagger UI is enabled at:
 I often found myself repeating the same setup for new projects: authentication, architecture, error handling, and more.
 This template helps spin up a new REST API in minutes with all essentials ready to go.
 
----
 
 ## 🤝 Contribute or Use It
 
