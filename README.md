@@ -45,7 +45,6 @@ RestApiTemplate/
 
 ```bash
 git clone https://github.com/your-username/restapi-template-mongo.git
-cd aspnet-mongo-api
 ```
 
 2. Set Up MongoDB
