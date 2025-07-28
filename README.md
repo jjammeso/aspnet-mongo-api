@@ -44,28 +44,49 @@ RestApiTemplate/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/restapi-template-mongo.git
+git clone https://github.com/jjammeso/aspnet-mongo-api.git
+cd aspnet-mongo-api/RestApiTemplate
+```
+### 2. Rename Configuration File
+
+Rename **appsettings.sample.json** to **appsettings.json**
+```
+mv appsettings.sample.json appsettings.json
 ```
 
-### 2. Set Up MongoDB
+### 3. Configure MongoDB Connection
 
-Make sure MongoDB is running locally or remotely.
+Make sure MongoDB is running locally or remotely, then update the MongoConnection string in the `appsettings.json`.
 Update your appsettings.json:
 
 ```json
-"MongoDbSettings": {
-  "ConnectionString": "your_mongodb_url",
+"ConnectionStrings": {
+  "MongoConnection": "your_mongodb_url"
+}
+```
+### 4. Configure JWT settings
+
+Set the following fields in appsettings.json under JwtSettings:
+
+```
+"JwtSettings": {
+  "Issuer": "YourAppName",
+  "Audience": "YourAppUser",
+  "Secret": "CreateASecretKeyWith32characters",
+  "ExpiryMinutes": 60
 }
 ```
 
-### 3. Restore Packages & Run
+### 5. Restore Packages & Run the app
 ```bash
 dotnet restore
 dotnet run
 ```
 
-- API will run at: http://localhost:5173
-- Swagger UI available at: https://localhost:7095/swagger/index.html
+### 6. Access the API at links below
+
+- Swagger UI: https://localhost:7095/swagger/index.html
+- API Base URL: http://localhost:5173
 
 ---
 
@@ -75,8 +96,8 @@ dotnet run
 
     Login → POST /auth/login         //Log in and receive access + refresh tokens
 
-    Use Bearer token in Authorization header      //Use the Bearer token in the Authorization header
-
+      *Use Bearer token in Authorization header      Add Authorization: Bearer <token> header to protected requests
+      
     Refresh token → POST /auth/refresh          //Refresh the access token using a valid refresh token
 
 ## 🧪 API Testing
