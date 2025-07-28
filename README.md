@@ -21,7 +21,7 @@ Designed to save time by eliminating repetitive setup and allowing you to build 
 ---
 
 ## 📁 Folder Structure
-
+```
 RestApiTemplate/
 ├── Controllers/
 ├── Database/
@@ -35,7 +35,7 @@ RestApiTemplate/
 ├── Validators/
 ├── appsettings.json
 └── Program.cs
-
+```
 
 ---
 
