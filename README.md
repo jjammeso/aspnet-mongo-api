@@ -47,7 +47,7 @@ RestApiTemplate/
 git clone https://github.com/your-username/restapi-template-mongo.git
 ```
 
-2. Set Up MongoDB
+### 2. Set Up MongoDB
 
 Make sure MongoDB is running locally or remotely.
 Update your appsettings.json:
@@ -58,7 +58,7 @@ Update your appsettings.json:
 }
 ```
 
-3. Restore Packages & Run
+### 3. Restore Packages & Run
 ```bash
 dotnet restore
 dotnet run
@@ -67,7 +67,7 @@ dotnet run
 - API will run at: http://localhost:5173
 - Swagger UI available at: https://localhost:7095/swagger/index.html
 
-🔐 Authentication Flow
+## 🔐 Authentication Flow
 
     Register → POST /auth/register    //Register a new user
 
@@ -77,7 +77,7 @@ dotnet run
 
     Refresh token → POST /auth/refresh          //Refresh the access token using a valid refresh token
 
-  🧪 API Testing
+## 🧪 API Testing
 
 Swagger UI is enabled at:
 
@@ -85,25 +85,26 @@ Swagger UI is enabled at:
 
   Use it to test endpoints and view request/response models.
 
-💡 Why I build this template?
+## 💡 Why I build this template?
 
 I often found myself repeating the same setup for new projects: authentication, architecture, error handling, and more.
 This template helps spin up a new REST API in minutes with all essentials ready to go.
 
-🤝 Contribute or Use It
+## 🤝 Contribute or Use It
 
 Feel free to use it in your own projects or contribute to improve it!
 
 Pull requests are welcome. 🌟
 
-📄 License
+### 📄 License
 
 MIT License
 
-✍️ Author
+### ✍️ Author
 
 Sonam Jamtsho
 📧 Email: sjjamtsho@gmail.com
+
 🔗 LinkedIn: https://www.linkedin.com/in/sonam-jamtsho-944288228/
 
 
